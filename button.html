@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px black solid;
+            width: 35%;
+            height: 400px;
+            margin-left: 480px;
+            margin-top: 120px;
+            border-color: blue;
+            
+        }
+        #b-div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            
+            #b1{
+                height: 40px;
+                width: 100px;
+                border-radius: 10px;
+                background-color:rgb(91, 197, 238) ;
+                color: white;
+                font-weight: bold;
+                border-color:skyblue;
+                border: none;
+
+            }
+            #b2{
+                height: 40px;
+                width: 100px;
+                border-radius: 10px;
+                background-color:rgb(91, 197, 238) ;
+                color: white;
+                font-weight: bold;
+                border-color:skyblue;
+                border: none;
+            }
+            #b3{
+                height: 40px;
+                width: 100px;
+                border-radius: 10px;
+                background-color:rgb(91, 197, 238) ;
+                color: white;
+                font-weight: bold;
+                border-color:skyblue;
+                border: none;
+            }
+            #b4{
+                height: 40px;
+                width: 100px;
+                border-radius: 10px;
+                background-color:rgb(91, 197, 238) ;
+                color: white;
+                font-weight: bold;
+                border-color:skyblue;
+                border: none;
+            }
+            /* .B1{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px;
+                border: 2px black solid;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div id="button">
+        <div id="b-div">
+            <div id="image">
+                <img id="img" src="https://tse1.mm.bing.net/th?id=OIP.DYVmLBc8R5OUWiqHnEV51gHaEK&pid=Api&P=0&h=180" alt="display-image" width="400" height="200">
+            </div>
+            <div id="B1">
+                <button id="b1" data-image="https://tse3.mm.bing.net/th?id=OIP.neKSTZhFuj_2YoNMo0oQyQHaEo&pid=Api&P=0&h=180">Button 1</button>
+                <button id="b2" data-image="https://tse2.mm.bing.net/th?id=OIP.gASMlPqsrIt_9q8Y76PZKgHaFj&pid=Api&P=0&h=180">Button 2</button>
+                <button id="b3" data-image="https://tse2.mm.bing.net/th?id=OIP.TQSxaEcMizUChr5Gz1dbYgHaFj&pid=Api&P=0&h=180">Button 3</button>
+                <button id="b4" data-image="https://tse2.mm.bing.net/th?id=OIP.XfW7lfvDoHTE4o_kJZA5aAHaE8&pid=Api&P=0&h=180">Button 4</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('#b-div button');
+        const imageDiv = document.getElementById('image');
+        const displayImage = document.getElementById('img');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const imageSrc = button.getAttribute('data-image');
+                displayImage.src = imageSrc;
+                imageDiv.style.display = 'block';
+            });
+        });
+
+    </script>
+</body>
+</html>
+
